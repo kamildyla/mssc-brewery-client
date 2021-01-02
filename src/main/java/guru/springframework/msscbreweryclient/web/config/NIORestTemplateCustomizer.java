@@ -12,7 +12,7 @@ import org.springframework.http.client.HttpComponentsAsyncClientHttpRequestFacto
 import org.springframework.web.client.RestTemplate;
 
 //@Component
-public class NIORestTemplateCustomizer implements RestTemplateCustomizer {
+class NIORestTemplateCustomizer implements RestTemplateCustomizer {
 
     public ClientHttpRequestFactory clientHttpRequestFactory() throws IOReactorException {
         final DefaultConnectingIOReactor ioReactor = new DefaultConnectingIOReactor(IOReactorConfig.custom().
